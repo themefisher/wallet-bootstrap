@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Wallet - Payday Loan Service Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<meta name="description" content="This is meta description">
+	<meta name="author" content="Themefisher">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+	<!-- # Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<!-- # CSS Plugins -->
+	<link rel="stylesheet" href="plugins/slick/slick.css">
+	<link rel="stylesheet" href="plugins/font-awesome/fontawesome.min.css">
+	<link rel="stylesheet" href="plugins/font-awesome/brands.css">
+	<link rel="stylesheet" href="plugins/font-awesome/solid.css">
+
+	<!-- # Main Style Sheet -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- navigation -->
+<header class="navigation bg-tertiary">
+	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">
+				<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.png" alt="Wallet">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+					<li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item "> <a class="nav-link" href="about.html">About</a>
+					</li>
+					<li class="nav-item "> <a class="nav-link" href="how-it-works.html">How It Works</a>
+					</li>
+					<li class="nav-item "> <a class="nav-link" href="services.html">Services</a>
+					</li>
+					<li class="nav-item "> <a class="nav-link" href="contact.html">Contact</a>
+					</li>
+					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item " href="blog.html">Blog</a>
+							</li>
+							<li><a class="dropdown-item " href="blog-details.html">Blog Details</a>
+							</li>
+							<li><a class="dropdown-item " href="service-details.html">Service Details</a>
+							</li>
+							<li><a class="dropdown-item " href="faq.html">FAQ&#39;s</a>
+							</li>
+							<li><a class="dropdown-item " href="legal.html">Legal</a>
+							</li>
+							<li><a class="dropdown-item " href="terms.html">Terms &amp; Condition</a>
+							</li>
+							<li><a class="dropdown-item " href="privacy-policy.html">Privacy &amp; Policy</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- account btn --> <a href="#!" class="btn btn-outline-primary">Log In</a>
+				<!-- account btn --> <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a>
+			</div>
+		</div>
+	</nav>
+</header>
+<!-- /navigation -->
+
+<div class="modal applyLoanModal fade" id="applyLoan" tabindex="-1" aria-labelledby="applyLoanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h4 class="modal-title" id="exampleModalLabel">How much do you need?</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="#!" method="post">
+          <div class="row">
+            <div class="col-lg-6 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_amount" class="form-label">Amount</label>
+                <input type="number" class="form-control shadow-none" id="loan_amount" placeholder="ex: 25000">
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_how_long_for" class="form-label">How long for?</label>
+                <input type="number" class="form-control shadow-none" id="loan_how_long_for" placeholder="ex: 12">
+              </div>
+            </div>
+            <div class="col-lg-12 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_repayment" class="form-label">Repayment</label>
+                <input type="number" class="form-control shadow-none" id="loan_repayment" disabled>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_full_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control shadow-none" id="loan_full_name">
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_email_address" class="form-label">Email address</label>
+                <input type="email" class="form-control shadow-none" id="loan_email_address">
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <button type="submit" class="btn btn-primary w-100">Get Your Loan Now</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="mb-5">
+          <h2 class="mb-4" style="line-height:1.5">Elements That You Can Use To Create A New Post On This Template.</h2>
+          <span>15 March 2020 <span class="mx-2">/</span> </span>
+          <p class="list-inline-item">Category : <a href="#!" class="ml-1">Photography </a>
+          </p>
+          <p class="list-inline-item">Tags : <a href="#!" class="ml-1">Photo </a> ,<a href="#!"
+              class="ml-1">Image </a>
+          </p>
+        </div>
+        <div class="mb-5 text-center">
+          <div class="post-slider rounded overflow-hidden">
+            <img loading="lazy" decoding="async" src="images/blog/post-4.jpg" alt="Post Thumbnail">
+            <img loading="lazy" decoding="async" src="images/blog/post-5.jpg" alt="Post Thumbnail">
+            <img loading="lazy" decoding="async" src="images/blog/post-3.jpg" alt="Post Thumbnail">
+          </div>
+        </div>
+        <div class="content">
+          <h4 id="heading-example">Heading example</h4>
+          <p>Here is example of hedings. You can use this heading by following markdownify rules. For example: use
+            <code>#</code> for heading 1 and use <code>######</code> for heading 6.</p>
+          <h1 id="heading-1">Heading 1</h1>
+          <h2 id="heading-2">Heading 2</h2>
+          <h3 id="heading-3">Heading 3</h3>
+          <h4 id="heading-4">Heading 4</h4>
+          <h5 id="heading-5">Heading 5</h5>
+          <h6 id="heading-6">Heading 6</h6>
+          <hr>
+          <h5 id="emphasis">Emphasis</h5>
+          <p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+          <p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+          <p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+          <p>Strikethrough uses two tildes. <del>Scratch this.</del>
+          </p>
+          <hr>
+          <h5 id="link">Link</h5>
+          <p><a href="https://www.google.com">I&rsquo;m an inline-style link</a>
+          </p>
+          <p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a>
+          </p>
+          <p><a href="https://www.themefisher.com">I&rsquo;m a reference-style link</a>
+          </p>
+          <p><a href="#!">I&rsquo;m a relative reference to a repository file</a>
+          </p>
+          <p><a href="https://gethugothemes.com">You can use numbers for reference-style link definitions</a>
+          </p>
+          <p>Or leave it empty and use the <a href="https://www.getjekyllthemes.com">link text itself</a>.</p>
+          <p>URLs and URLs in angle brackets will automatically get turned into links.
+            <a href="http://www.example.com">http://www.example.com</a> or <a
+              href="http://www.example.com">http://www.example.com</a> and sometimes example.com (but not on Github, for
+            example).</p>
+          <p>Some text to show that the reference links can follow later.</p>
+          <hr>
+          <h5 id="paragraph">Paragraph</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam
+            aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur!
+            Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni
+            perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt
+            fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque
+            maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil.
+            Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum
+            rerum laboriosam.</p>
+          <hr>
+          <h5 id="ordered-list">Ordered List</h5>
+          <ol>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+          </ol>
+          <hr>
+          <h5 id="unordered-list">Unordered List</h5>
+          <ul>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+          </ul>
+          <hr>
+          <h4 id="notice">Notice</h4>
+          <div class="notices note">
+            <p>This is a simple note.</p>
+          </div>
+          <div class="notices tip">
+            <p>This is a simple tip.</p>
+          </div>
+          <div class="notices info">
+            <p>This is a simple info.</p>
+          </div>
+          <hr>
+          <h4 id="tab">Tab</h4>
+          <div class="code-tabs">
+            <ul class="nav nav-tabs"></ul>
+            <div class="tab-content">
+              <div class="tab-pane" title="first">This is first tab</div>
+              <div class="tab-pane" title="second">this is second tab</div>
+              <div class="tab-pane" title="third">this is third tab</div>
+            </div>
+          </div>
+          <hr>
+          <h3 id="collapse">Collapse</h3>
+          <div class="accordion accordion-wrapper">
+            <div class="accordion-item mb-1">
+              <h2 class="accordion-header accordion-button h5 fw-normal border-0 mt-4 p-0 text-capitalize"
+                id="heading-collapse-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-collapse-1"
+                aria-controls="collapse-collapse-1">collapse 1
+              </h2>
+              <div id="collapse-collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-collapse-1">
+                <div class="accordion-body p-0 pt-2 content">This is a simple collapse</div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion accordion-wrapper">
+            <div class="accordion-item mb-1">
+              <h2 class="accordion-header accordion-button h5 fw-normal border-0 mt-4 p-0 text-capitalize"
+                id="heading-collapse-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-collapse-2"
+                aria-controls="collapse-collapse-2">collapse 2
+              </h2>
+              <div id="collapse-collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-collapse-2">
+                <div class="accordion-body p-0 pt-2 content">This is a simple collapse</div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion accordion-wrapper">
+            <div class="accordion-item mb-1">
+              <h2 class="accordion-header accordion-button h5 fw-normal border-0 mt-4 p-0 text-capitalize"
+                id="heading-collapse-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-collapse-3"
+                aria-controls="collapse-collapse-3">collapse 3
+              </h2>
+              <div id="collapse-collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-collapse-3">
+                <div class="accordion-body p-0 pt-2 content">This is a simple collapse</div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h5 id="blockquote">Blockquote</h5>
+          <blockquote>
+            <p>This is a blockquote example.</p>
+          </blockquote>
+          <hr>
+          <h5 id="tables">Tables</h5>
+          <p>Colons can be used to align columns.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Tables</th>
+                <th style="text-align:center">Are</th>
+                <th style="text-align:right">Cool</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>col 3 is</td>
+                <td style="text-align:center">right-aligned</td>
+                <td style="text-align:right">$1600</td>
+              </tr>
+              <tr>
+                <td>col 2 is</td>
+                <td style="text-align:center">centered</td>
+                <td style="text-align:right">$12</td>
+              </tr>
+              <tr>
+                <td>zebra stripes</td>
+                <td style="text-align:center">are neat</td>
+                <td style="text-align:right">$1</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you
+            don&rsquo;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Markdown</th>
+                <th>Less</th>
+                <th>Pretty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><em>Still</em>
+                </td>
+                <td><code>renders</code>
+                </td>
+                <td><strong>nicely</strong>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr>
+          <h5 id="image">Image</h5>
+          <p>
+            <img loading="lazy" decoding="async" class="w-100 d-block mb-4" src="images/blog/post-4.jpg"
+              alt="placeholder image">
+            <img loading="lazy" decoding="async" class="w-100 d-block mb-4"
+              src="https://dummyimage.com/1100x500/e8e8e8/16161a.jpg" alt="placeholder image">
+          </p>
+          <hr>
+          <h5 id="youtube-video">Youtube video</h5>
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe src="https://www.youtube.com/embed/KFmA9W8i4X4"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen
+              title="YouTube Video"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="section-sm bg-tertiary">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-2 col-md-4 col-6 mb-4">
+				<div class="footer-widget">
+					<h5 class="mb-4 text-primary font-secondary">Service</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="service-details.html">Personal loans</a>
+						</li>
+						<li class="mb-2"><a href="service-details.html">Home Equity Loans</a>
+						</li>
+						<li class="mb-2"><a href="service-details.html">Student Loans</a>
+						</li>
+						<li class="mb-2"><a href="service-details.html">Mortgage Loans</a>
+						</li>
+						<li class="mb-2"><a href="service-details.html">Payday Loans</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4 col-6 mb-4">
+				<div class="footer-widget">
+					<h5 class="mb-4 text-primary font-secondary">About</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="#!">Benefits</a>
+						</li>
+						<li class="mb-2"><a href="#!">Careers</a>
+						</li>
+						<li class="mb-2"><a href="#!">Our Story</a>
+						</li>
+						<li class="mb-2"><a href="#!">Team</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4 col-6 mb-4">
+				<div class="footer-widget">
+					<h5 class="mb-4 text-primary font-secondary">Help</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="contact.html">Contact Us</a>
+						</li>
+						<li class="mb-2"><a href="faq.html">FAQs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-12 newsletter-form">
+				<div style="background-color: #F4F4F4; padding: 35px;">
+					<h5 class="mb-4 text-primary font-secondary">Subscribe</h5>
+					<div class="pe-0 pe-xl-5">
+						<form action="#!" method="post" name="mc-embedded-subscribe-form" target="_blank">
+							<div class="input-group mb-3">
+								<input type="text" class="form-control shadow-none bg-white border-end-0" placeholder="Email address"> <span class="input-group-text border-0 p-0">
+                    <button class="input-group-text border-0 bg-primary" type="submit" name="subscribe"
+                      aria-label="Subscribe for Newsletter"><i class="fas fa-arrow-right"></i></button>
+                  </span>
+							</div>
+							<div style="position: absolute; left: -5000px;" aria-hidden="true">
+								<input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
+							</div>
+						</form>
+					</div>
+					<p class="mb-0">Lorem ipsum dolor sit amet, rdghds consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
+				</div>
+			</div>
+		</div>
+		<div class="row align-items-center mt-5 text-center text-md-start">
+			<div class="col-lg-4">
+        <a href="index.html">
+          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.png" alt="Wallet">
+        </a>
+			</div>
+			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+				<ul class="list-unstyled list-inline mb-0 text-lg-center">
+					<li class="list-inline-item me-4"><a class="text-black" href="privacy-policy.html">Privacy Policy</a>
+					</li>
+					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terms &amp; Conditions</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-md-6 text-md-end mt-4 mt-md-0">
+				<ul class="list-unstyled list-inline mb-0 social-icons">
+					<li class="list-inline-item me-3"><a title="Explorer Facebook Profile" class="text-black" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+					</li>
+					<li class="list-inline-item me-3"><a title="Explorer Twitter Profile" class="text-black" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+					</li>
+					<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<!-- # JS Plugins -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/scrollmenu/scrollmenu.min.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
