@@ -11,7 +11,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Wallet - Payday Loan Service Template</title>
+	<title>X3O Technologes - </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	<meta name="description" content="This is meta description">
 	<meta name="author" content="Themefisher">
@@ -31,13 +31,150 @@
 	<link rel="stylesheet" href="plugins/font-awesome/fontawesome.min.css">
 	<link rel="stylesheet" href="plugins/font-awesome/brands.css">
 	<link rel="stylesheet" href="plugins/font-awesome/solid.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3l5z6N3D6z+X6d+U7" crossorigin="anonymous">
+
+<!-- Bootstrap JS and its dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBud7tM3z4z7lGFy1zDlS2xjxJzp+2IbEA4GRD2W4T6f8Oh7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+  }
+
+  #chatbot {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+  }
+
+  #messages {
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+
+  .user {
+    color: #ffffff;
+    background-color: #7b5dc5;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    clear: both;
+  }
+
+  .bot {
+    color: #000000;
+    background-color: #f0f0f0;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    clear: both;
+  }
+
+  .input-group {
+    position: relative;
+  }
+
+  #sendButton {
+    background-color: #7b5dc5;
+    border: none;
+    border-radius: 0 3px 3px 0;
+  }
+
+  #sendButton:hover {
+    background-color: #5a48a8;
+  }
+
+  #inputMessage {
+    border-radius: 3px 0 0 3px;
+    border-right: none;
+  }
+</style>
 
 	<!-- # Main Style Sheet -->
 	<link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fafafa;
+    }
+  
+    #chatbot {
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+    }
+  
+    #messages {
+      height: 400px;
+      overflow-y: auto;
+      margin-bottom: 20px;
+    }
+  
+    .user {
+      color: #ffffff;
+      background-color: #7b5dc5;
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 15px;
+      margin-bottom: 3px;
+      clear: both;
+    }
+  
+    .bot {
+      color: #000000;
+      background-color: #f0f0f0;
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 15px;
+      margin-bottom: 3px;
+      clear: both;
+    }
+  
+    .input-group {
+      position: relative;
+    }
+  
+    #sendButton {
+      background-color: #7b5dc5;
+      border: none;
+      border-radius: 0 3px 3px 0;
+    }
+  
+    #sendButton:hover {
+      background-color: #5a48a8;
+    }
+  
+    #inputMessage {
+      border-radius: 3px 0 0 3px;
+      border-right: none;
+    }
+  </style>
+  
 
 
-
-
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Chatbot</title>
+  </head>
+  <body>
 
   
 </head>
@@ -394,8 +531,9 @@
     <div class="row justify-content-center">
       <div class="col-lg-8 mb-4">
         <div class="section-title text-center">
-          <p class="text-primary text-uppercase fw-bold mb-3">Difference Of Us</p>
-          <h1>Get Know The Basics Simple Pricing And Payments</h1>
+          <p class="text-primary text-uppercase fw-bold mb-3">Introducing Enterprise Solutions Suite:</p>
+          <p2>Elevate your business with our powerful suite of next-generation services, designed to cater to your organization's
+             monitoring, security, and infrastructure needs. Leverage our expertise in the cloud field and experience CEO-level service.</p2>
         </div>
       </div>
       <div class="col-lg-10">
@@ -403,17 +541,17 @@
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-dark active" id="pills-how-much-can-i-recive-tab"
               data-bs-toggle="pill" href="#pills-how-much-can-i-recive" role="tab"
-              aria-controls="pills-how-much-can-i-recive" aria-selected="true">How Much Can I Recive?</a>
+              aria-controls="pills-how-much-can-i-recive" aria-selected="true">PerformanceInsight Pro</a>
           </li>
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-much-does-it-costs-tab"
               data-bs-toggle="pill" href="#pills-how-much-does-it-costs" role="tab"
-              aria-controls="pills-how-much-does-it-costs" aria-selected="true">How Much Does It Costs?</a>
+              aria-controls="pills-how-much-does-it-costs" aria-selected="true">CyberGuard </a>
           </li>
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-do-i-repay-tab"
               data-bs-toggle="pill" href="#pills-how-do-i-repay" role="tab" aria-controls="pills-how-do-i-repay"
-              aria-selected="true">How Do I Repay?</a>
+              aria-selected="true">CloudTransform</a>
           </li>
         </ul>
         <div class="rounded shadow bg-white p-5 tab-content" id="pills-tabContent">
@@ -422,12 +560,15 @@
             <div class="row align-items-center">
               <div class="col-md-6 order-1 order-md-0">
                 <div class="content-block">
-                  <h3 class="mb-4">How Much Can I Recive?</h3>
+                  <h3 class="mb-4">PerformanceInsight Pro</h3>
                   <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consec tetasssur adipiscing elit. Tellus integer proin nisl pretium,
-                      vestibulum dictum blandit risus. Nisl commodo</p>
-                    <p>turpis vivamus donec. Id congue vesti bualum odio dignissim at quisque viverra. Non semper in sed
-                      quisque dui. Platea posuere ullamcorper id fames ut sed urna cursus eget. Neque, vel</p>
+                    <p>Effortlessly optimize your organization's performance with our powerful monitoring solution. 
+                      Gain real-time insights and advanced analytics to drive data-driven decision-making, maximize operational 
+                      efficiency, and ensure optimal system performance.</p>
+                      <a type="button" class="btn btn-primary" href="#" data-bs-toggle="modal" 
+                      data-bs-target="#applyLoan">Try Free Trail<span style="font-size: 14px;" 
+                      class="ms-2 fas fa-arrow-right"></span></a>
+
                   </div>
                 </div>
               </div>
@@ -444,12 +585,18 @@
             <div class="row align-items-center">
               <div class="col-md-6 order-1 order-md-0">
                 <div class="content-block">
-                  <h3 class="mb-4">How Much Does It Costs?</h3>
+                  <h3 class="mb-4">CyberGuard:</h3>
                   <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consec tetasssur adipiscing elit. Tellus integer proin nisl pretium,
-                      vestibulum dictum blandit risus. Nisl commodo</p>
-                    <p>turpis vivamus donec. Id congue vesti bualum odio dignissim at quisque viverra. Non semper in sed
-                      quisque dui. Platea posuere ullamcorper id fames ut sed urna cursus eget. Neque, vel</p>
+                    <p>Safeguard your business from cyber threats with our all-in-one security suite. Protect your sensitive 
+                      data and infrastructure while minimizing financial risks and implementing state-of-the-art security measures.</p>
+                    <p>Intuitive interface
+                      Advanced threat detection and response
+                      Continuous security updates
+                    <p>   
+                      <a type="button" class="btn btn-primary" href="#" data-bs-toggle="modal" 
+                      data-bs-target="#applyLoan">Request Demo <span style="font-size: 14px;" 
+                      class="ms-2 fas fa-arrow-right"></span></a>
+                      
                   </div>
                 </div>
               </div>
@@ -465,12 +612,15 @@
             <div class="row align-items-center">
               <div class="col-md-6 order-1 order-md-0">
                 <div class="content-block">
-                  <h3 class="mb-4">How Do I Repay?</h3>
+                  <h3 class="mb-4">CloudTransform:</h3>
                   <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consec tetasssur adipiscing elit. Tellus integer proin nisl pretium,
-                      vestibulum dictum blandit risus. Nisl commodo</p>
-                    <p>turpis vivamus donec. Id congue vesti bualum odio dignissim at quisque viverra. Non semper in sed
-                      quisque dui. Platea posuere ullamcorper id fames ut sed urna cursus eget. Neque, vel</p>
+                    <p>Experience a smooth transition to the cloud with our comprehensive migration assistance service. 
+                      Accelerate digital transformation, reduce IT infrastructure costs, and increase scalability with the full 
+                      potential of cloud technology.
+                    </p>
+                      <a type="button" class="btn btn-primary" href="#" data-bs-toggle="modal" 
+                      data-bs-target="#applyLoan">Call Now <span style="font-size: 14px;" 
+                      class="ms-2 fas fa-arrow-right"></span></a>
                   </div>
                 </div>
               </div>
@@ -522,111 +672,23 @@
   </div>
 </section>
 
-<section class="section testimonials overflow-hidden bg-tertiary">
+<section class="section clients bg-tertiary">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6">
         <div class="section-title text-center">
-          <p class="text-primary text-uppercase fw-bold mb-3">Our Service Holders</p>
-          <h1 class="mb-4">Trusted By 1.2K+ Peoples</h1>
-          <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing. egestas cursus pellentesque dignissim
-            dui, congue. Vel etiam ut</p>
+          <p class="text-primary text-uppercase fw-bold mb-3">Our Clients</p>
+          <h1 class="mb-4">Trusted by Industry Leaders</h1>
+          <p class="lead mb-0"><p class="lead mb-0">We deeply value our clients' privacy and take 
+            every measure to protect their data and ensure confidentiality.
+          We create a better together story with our clients</p></p>
         </div>
       </div>
-    </div>
-    <div class="row position-relative">
-      <div class="col-lg-4 col-md-6 pt-1">
-        <div class="shadow rounded bg-white p-4 mt-4">
-          <div class="d-block d-sm-flex align-items-center mb-3">
-            <img loading="lazy" decoding="async"
-              src="images/testimonials/01.jpg"
-              alt="Leslie Alexander" class="img-fluid" width="65" height="66">
-            <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
-              <h4 class="h5 mb-1">Leslie Alexander</h4>
-              <p class="mb-0">Web Designer</p>
-            </div>
+ 
           </div>
-          <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
-            felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 pt-1">
-        <div class="shadow rounded bg-white p-4 mt-4">
-          <div class="d-block d-sm-flex align-items-center mb-3">
-            <img loading="lazy" decoding="async"
-              src="images/testimonials/02.jpg"
-              alt="Arlene McCoy" class="img-fluid" width="65" height="66">
-            <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
-              <h4 class="h5 mb-1">Arlene McCoy</h4>
-              <p class="mb-0">Content Strategist</p>
-            </div>
-          </div>
-          <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
-            felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 pt-1">
-        <div class="shadow rounded bg-white p-4 mt-4">
-          <div class="d-block d-sm-flex align-items-center mb-3">
-            <img loading="lazy" decoding="async"
-              src="images/testimonials/03.jpg"
-              alt="Marvin McKinney" class="img-fluid" width="65" height="66">
-            <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
-              <h4 class="h5 mb-1">Marvin McKinney</h4>
-              <p class="mb-0">Video Game Writer</p>
-            </div>
-          </div>
-          <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
-            felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 pt-1">
-        <div class="shadow rounded bg-white p-4 mt-4">
-          <div class="d-block d-sm-flex align-items-center mb-3">
-            <img loading="lazy" decoding="async"
-              src="images/testimonials/04.jpg"
-              alt="Devon Lane" class="img-fluid" width="65" height="66">
-            <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
-              <h4 class="h5 mb-1">Devon Lane</h4>
-              <p class="mb-0">Nursing Assistant</p>
-            </div>
-          </div>
-          <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
-            felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 pt-1">
-        <div class="shadow rounded bg-white p-4 mt-4">
-          <div class="d-block d-sm-flex align-items-center mb-3">
-            <img loading="lazy" decoding="async"
-              src="images/testimonials/05.jpg"
-              alt="Bessie Cooper" class="img-fluid" width="65" height="66">
-            <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
-              <h4 class="h5 mb-1">Bessie Cooper</h4>
-              <p class="mb-0">Video Game Writer</p>
-            </div>
-          </div>
-          <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
-            felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 pt-1">
-        <div class="shadow rounded bg-white p-4 mt-4">
-          <div class="d-block d-sm-flex align-items-center mb-3">
-            <img loading="lazy" decoding="async"
-              src="images/testimonials/06.jpg"
-              alt="Kathryn Murphy" class="img-fluid" width="65" height="66">
-            <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
-              <h4 class="h5 mb-1">Kathryn Murphy</h4>
-              <p class="mb-0">Film Critic</p>
-            </div>
-          </div>
-          <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
-            felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+          <!-- Add more carousel items here for other industries -->
+
+</section>
   <div class="has-shapes">
     <svg class="shape shape-left text-light" width="290" height="709" viewBox="0 0 290 709" fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -677,110 +739,78 @@
         <div class="accordion shadow rounded py-5 px-0 px-lg-4 bg-white position-relative" id="accordionFAQ">
           <div class="accordion-item p-1 mb-2">
             <h2 class="accordion-header accordion-button h5 border-0 active"
-              id="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" aria-expanded="true"
-              aria-controls="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9">Can I apply if my credit isn&rsquo;t
-              perfect?
+              id="headingOne" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">What industries do you support?
             </h2>
-            <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9"
+            <div id="collapseOne"
               class="accordion-collapse collapse border-0 show"
-              aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content">The difference between and premium product consist number of
-                components, plugins, page in each. The Free versions contain only a few elements and pages that.</div>
+              aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content">We support a wide range of industries including Web 3, enterprises, startups, financial services, NFTs, and blockchain. Our expertise allows us to tailor solutions to meet the unique needs of each industry.</div>
             </div>
           </div>
           <div class="accordion-item p-1 mb-2">
             <h2 class="accordion-header accordion-button h5 border-0 "
-              id="heading-a443e01b4db47b3f4a1267e10594576d52730ec1" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec1" aria-expanded="false"
-              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec1">How do I know that I have been
-              approved?
+              id="headingTwo" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false"
+              aria-controls="collapseTwo">How do you ensure client data privacy?
             </h2>
-            <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec1" class="accordion-collapse collapse border-0 "
-              aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec1" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content">The difference between and premium product consist number of
-                components, plugins, page in each. The Free versions contain only a few elements and pages that.</div>
+            <div id="collapseTwo" class="accordion-collapse collapse border-0 "
+              aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content">We take client data privacy very seriously. We employ industry-standard security measures, including encryption and secure access protocols, to ensure that your data remains protected. Additionally, we adhere to strict privacy policies and never sell or share client information with third parties without explicit consent.</div>
             </div>
           </div>
           <div class="accordion-item p-1 mb-2">
             <h2 class="accordion-header accordion-button h5 border-0 "
-              id="heading-4b82be4be873c8ad699fa97049523ac86b67a8bd" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapse-4b82be4be873c8ad699fa97049523ac86b67a8bd" aria-expanded="false"
-              aria-controls="collapse-4b82be4be873c8ad699fa97049523ac86b67a8bd">Do I need to fax or email any
-              documents?
+              id="headingThree" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false"
+              aria-controls="collapseThree">Do you provide support for your services?
             </h2>
-            <div id="collapse-4b82be4be873c8ad699fa97049523ac86b67a8bd" class="accordion-collapse collapse border-0 "
-              aria-labelledby="heading-4b82be4be873c8ad699fa97049523ac86b67a8bd" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content">The difference between and premium product consist number of
-                components, plugins, page in each. The Free versions contain only a few elements and pages that.</div>
+            <div id="collapseThree" class="accordion-collapse collapse border-0 "
+              aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content">Yes, we provide comprehensive support for our services. Our dedicated team is available to assist with any questions or concerns you may have. You can reach us through email, phone, or our website's live chat feature during our business hours.</div>
             </div>
           </div>
           <div class="accordion-item p-1 mb-2">
             <h2 class="accordion-header accordion-button h5 border-0 "
-              id="heading-3e13e9676a9cd6a6f8bfbe6e1e9fc0881ef247b3" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapse-3e13e9676a9cd6a6f8bfbe6e1e9fc0881ef247b3" aria-expanded="false"
-              aria-controls="collapse-3e13e9676a9cd6a6f8bfbe6e1e9fc0881ef247b3">Do you provide loans to military
-              personnel?
+              id="headingFour" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false"
+              aria-controls="collapseFour">How do I get started with your services?
             </h2>
-            <div id="collapse-3e13e9676a9cd6a6f8bfbe6e1e9fc0881ef247b3" class="accordion-collapse collapse border-0 "
-              aria-labelledby="heading-3e13e9676a9cd6a6f8bfbe6e1e9fc0881ef247b3" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content">The difference between and premium product consist number of
-                components, plugins, page in each. The Free versions contain only a few elements and pages that.</div>
+            <div id="collapseFour" class="accordion-collapse collapse border-0 "
+                       aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body py-0 content">To get started with our services, simply contact us through our website, email, or phone. Our team will discuss your requirements, understand your business needs, and help you choose the most suitable services to achieve your goals. We'll then guide you through the onboarding process and ensure a smooth transition.</div>
             </div>
-          </div>
-          <div class="accordion-item p-1 mb-2">
-            <h2 class="accordion-header accordion-button h5 border-0 "
-              id="heading-0c2f829793a1f0562fea97120357dd2d43319164" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapse-0c2f829793a1f0562fea97120357dd2d43319164" aria-expanded="false"
-              aria-controls="collapse-0c2f829793a1f0562fea97120357dd2d43319164">Can I remove footer credit purchase ?
-            </h2>
-            <div id="collapse-0c2f829793a1f0562fea97120357dd2d43319164" class="accordion-collapse collapse border-0 "
-              aria-labelledby="heading-0c2f829793a1f0562fea97120357dd2d43319164" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content">The difference between and premium product consist number of
-                components, plugins, page in each. The Free versions contain only a few elements and pages that.</div>
             </div>
-          </div>
-          <div class="accordion-item p-1 mb-2">
-            <h2 class="accordion-header accordion-button h5 border-0 "
-              id="heading-8fe6730e26db16f15763887c30a614caa075f518" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapse-8fe6730e26db16f15763887c30a614caa075f518" aria-expanded="false"
-              aria-controls="collapse-8fe6730e26db16f15763887c30a614caa075f518">What is the difference the free
-              versions?
-            </h2>
-            <div id="collapse-8fe6730e26db16f15763887c30a614caa075f518" class="accordion-collapse collapse border-0 "
-              aria-labelledby="heading-8fe6730e26db16f15763887c30a614caa075f518" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content">The difference between and premium product consist number of
-                components, plugins, page in each. The Free versions contain only a few elements and pages that.</div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mt-4 mt-lg-0">
-        <div class="shadow rounded py-5 px-4 ms-0 ms-lg-4 bg-white position-relative">
-          <div class="block mx-0 mx-lg-3 mt-0">
+            </div>
+            <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="shadow rounded py-5 px-4 ms-0 ms-lg-4 bg-white position-relative">
+            <div class="block mx-0 mx-lg-3 mt-0">
             <h4 class="h5">Still Have Questions?</h4>
-            <div class="content">Call Us We Will Be Happy To Help
-              <br> <a href="tel:+3301563965">+3301563965</a>
-              <br>Monday - Friday
-              <br>9AM TO 8PM Eastern Time</div>
-          </div>
-          <div class="block mx-0 mx-lg-3 mt-4">
-            <h4 class="h5">Canada Office</h4>
+            <div class="content">Contact Us!
+            <br> <a href="...">contact@x3otech.com</a>
+            <br>Monday - Friday
+            <br>9AM TO 8PM Eastern Time</div>
+            </div>
+            <div class="block mx-0 mx-lg-3 mt-4">
+            <h4 class="h5"></h4>
             <div class="content">231 Ross Street.
-              <br>K7A 1C2.
-              <br>Smiths Falls</div>
-          </div>
-          <div class="block mx-0 mx-lg-3 mt-4">
+            <br>K7A 1C2.
+            <br>Smiths Falls</div>
+            </div>
+            <div class="block mx-0 mx-lg-3 mt-4">
             <h4 class="h5">UK Office</h4>
             <div class="content">57 Folkestone Road.
-              <br>AB54 5XQ,
-              <br>Winston</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <br>AB54 5XQ,
+            <br>Winston</div>
+            </div>
+            </div>
+            </div>
+            </div>
+            
+              </div>
+            </section>
 
 <footer class="section-sm bg-tertiary">
 	<div class="container">
