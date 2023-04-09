@@ -10071,6 +10071,31 @@ textarea.form-control {
 .applyLoanModal .modal-content {
   padding: 10px;
 }
+
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  width: 320px;
+  padding: 30px;
+  border-radius: 15px;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 768px) {
+  #chatbot {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #chatbot {
+    width: 200px;
+  }
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -10084,6 +10109,24 @@ textarea.form-control {
   animation: rotate 10s linear infinite;
 }
 
+/* Styling for the loading animation */
+#chat-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #ccc;
+  border-top: 5px solid #673AB7;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 
 /*# sourceMappingURL=style.css.map */

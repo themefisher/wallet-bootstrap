@@ -86,3 +86,33 @@ $(window).on("load", function () {
     scrollOffset: 10,
   });
 })(jQuery);
+
+setTimeout(function() {
+  // Code to open the chatbot goes here
+}, 2000); // Delay of 2 seconds (2000 milliseconds)
+
+// Code to animate the chatbot launcher button
+var launcherButton = document.querySelector('.chatbot-launcher');
+launcherButton.addEventListener('click', function() {
+  launcherButton.classList.add('animated', 'pulse');
+  setTimeout(function() {
+    launcherButton.classList.remove('animated', 'pulse');
+  }, 1000); // Remove animation after 1 second
+});
+
+const chatbotLauncher = document.querySelector('.chatbot-launcher');
+const chatbotExpanded = document.querySelector('#chatbot-expanded');
+
+// Toggle the display of the expanded chatbot element
+chatbotLauncher.addEventListener('click', () => {
+  chatbotExpanded.style.display = chatbotExpanded.style.display === 'none' ? 'block' : 'none';
+});
+
+const chatbotLauncher = document.querySelector('.chatbot-launcher');
+const chatbotExpanded = document.querySelector('#chatbot-expanded');
+
+// Toggle the display of the expanded chatbot element and rotate the launcher
+chatbotLauncher.addEventListener('click', () => {
+  chatbotExpanded.style.display = chatbotExpanded.style.display === 'none' ? 'block' : 'none';
+  chatbotLauncher.classList.toggle('active');
+});

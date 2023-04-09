@@ -37,130 +37,10 @@
 <!-- Bootstrap JS and its dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBud7tM3z4z7lGFy1zDlS2xjxJzp+2IbEA4GRD2W4T6f8Oh7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-<style>
-  body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #fafafa;
-  }
-
-  #chatbot {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 15px;
-  }
-
-  #messages {
-    height: 400px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-  }
-
-  .user {
-    color: #ffffff;
-    background-color: #7b5dc5;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 15px;
-    margin-bottom: 3px;
-    clear: both;
-  }
-
-  .bot {
-    color: #000000;
-    background-color: #f0f0f0;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 15px;
-    margin-bottom: 3px;
-    clear: both;
-  }
-
-  .input-group {
-    position: relative;
-  }
-
-  #sendButton {
-    background-color: #7b5dc5;
-    border: none;
-    border-radius: 0 3px 3px 0;
-  }
-
-  #sendButton:hover {
-    background-color: #5a48a8;
-  }
-
-  #inputMessage {
-    border-radius: 3px 0 0 3px;
-    border-right: none;
-  }
-</style>
 
 	<!-- # Main Style Sheet -->
 	<link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #fafafa;
-    }
-  
-    #chatbot {
-      background-color: #ffffff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-      margin: 50px auto;
-      padding: 30px;
-      border-radius: 15px;
-    }
-  
-    #messages {
-      height: 400px;
-      overflow-y: auto;
-      margin-bottom: 20px;
-    }
-  
-    .user {
-      color: #ffffff;
-      background-color: #7b5dc5;
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 15px;
-      margin-bottom: 3px;
-      clear: both;
-    }
-  
-    .bot {
-      color: #000000;
-      background-color: #f0f0f0;
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 15px;
-      margin-bottom: 3px;
-      clear: both;
-    }
-  
-    .input-group {
-      position: relative;
-    }
-  
-    #sendButton {
-      background-color: #7b5dc5;
-      border: none;
-      border-radius: 0 3px 3px 0;
-    }
-  
-    #sendButton:hover {
-      background-color: #5a48a8;
-    }
-  
-    #inputMessage {
-      border-radius: 3px 0 0 3px;
-      border-right: none;
-    }
-  </style>
-  
+
 
 
   <!DOCTYPE html>
@@ -874,7 +754,8 @@
 							</div>
 						</form>
 					</div>
-					<p class="mb-0">Lorem ipsum dolor sit amet, rdghds consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
+					<p class="mb-0">Thank you for your interest in our services! To learn more and receive a personalized consultation, please provide us with your email address and we'll be in touch shortly. 
+            We value your privacy and will never share your information with any third parties. We look forward to speaking with you soon!</p>
 				</div>
 			</div>
 		</div>
@@ -913,8 +794,155 @@
 <script src="plugins/slick/slick.min.js"></script>
 <script src="plugins/scrollmenu/scrollmenu.min.js"></script>
 
+
 <!-- Main Script -->
 <script src="js/script.js"></script>
+<style>
+  #chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
 
-</body>
-</html>
+.chatbot-launcher {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #7b5dc5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-launcher:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-launcher img {
+  width: 40px;
+  height: 40px;
+}
+
+#chatbot-expanded {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.intro-message {
+  background-color: #7b5dc5;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#messages {
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.user {
+  color: #ffffff;
+  background-color: #7b5dc5;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-bottom: 3px;
+  clear: both;
+}
+
+.bot {
+  color: #000000;
+  background-color: #f0f0f0;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-bottom: 3px;
+  clear: both;
+}
+
+.input-group {
+  position: relative;
+}
+
+#sendButton {
+  background-color: #7b5dc5;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  padding: 8px 15px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#sendButton:hover {
+  background-color: #5a48a8;
+}
+
+.chatbot-launcher img {
+  width: auto;
+  height: auto;
+}
+
+.chatbot-launcher.active img {
+  transform: rotate(180deg);
+}
+
+.chatbot-launcher.active img {
+  transform: rotate(180deg) !important;
+}
+
+
+</style>
+
+
+
+
+<div id="chatbot">
+  <div class="chatbot-launcher">
+    <img src="images/banner/banner.png" alt="Chatbot logo">
+  </div>
+  <div id="chatbot-expanded">
+    <div class="intro-message">
+      <p>Hello! I'm your friendly helper. If you have any questions, feel free to ask!</p>
+    </div>
+    <div id="messages"></div>
+    <div class="input-group">
+      <input type="text" id="inputMessage" class="form-control" placeholder="Type your message...">
+      <button id="sendButton" class="btn">Send</button>
+    </div>
+  </div>
+</div>
+
+<div id="chatbox">
+  <div id="chat-messages"></div>
+  <form id="chat-form">
+    <input type="text" id="chat-input" placeholder="Type your message...">
+    <button type="submit" id="chat-send">Send</button>
+  </form>
+</div>
+
+
+
+
