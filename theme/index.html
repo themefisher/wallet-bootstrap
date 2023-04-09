@@ -421,17 +421,17 @@
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-dark active" id="pills-how-much-can-i-recive-tab"
               data-bs-toggle="pill" href="#pills-how-much-can-i-recive" role="tab"
-              aria-controls="pills-how-much-can-i-recive" aria-selected="true">PerformanceInsight Pro</a>
+              aria-controls="pills-how-much-can-i-recive" aria-selected="true">PerformanceInsightX</a>
           </li>
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-much-does-it-costs-tab"
               data-bs-toggle="pill" href="#pills-how-much-does-it-costs" role="tab"
-              aria-controls="pills-how-much-does-it-costs" aria-selected="true">CyberGuard </a>
+              aria-controls="pills-how-much-does-it-costs" aria-selected="true">CyberGuardX</a>
           </li>
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-do-i-repay-tab"
               data-bs-toggle="pill" href="#pills-how-do-i-repay" role="tab" aria-controls="pills-how-do-i-repay"
-              aria-selected="true">CloudTransform</a>
+              aria-selected="true">CloudTransformX</a>
           </li>
         </ul>
         <div class="rounded shadow bg-white p-5 tab-content" id="pills-tabContent">
@@ -440,7 +440,7 @@
             <div class="row align-items-center">
               <div class="col-md-6 order-1 order-md-0">
                 <div class="content-block">
-                  <h3 class="mb-4">PerformanceInsight Pro</h3>
+                  <h3 class="mb-4">PerformanceX</h3>
                   <div class="content">
                     <p>Effortlessly optimize your organization's performance with our powerful monitoring solution. 
                       Gain real-time insights and advanced analytics to drive data-driven decision-making, maximize operational 
@@ -465,7 +465,7 @@
             <div class="row align-items-center">
               <div class="col-md-6 order-1 order-md-0">
                 <div class="content-block">
-                  <h3 class="mb-4">CyberGuard:</h3>
+                  <h3 class="mb-4">CyberGuardX:</h3>
                   <div class="content">
                     <p>Safeguard your business from cyber threats with our all-in-one security suite. Protect your sensitive 
                       data and infrastructure while minimizing financial risks and implementing state-of-the-art security measures.</p>
@@ -492,7 +492,7 @@
             <div class="row align-items-center">
               <div class="col-md-6 order-1 order-md-0">
                 <div class="content-block">
-                  <h3 class="mb-4">CloudTransform:</h3>
+                  <h3 class="mb-4">CloudTransformX:</h3>
                   <div class="content">
                     <p>Experience a smooth transition to the cloud with our comprehensive migration assistance service. 
                       Accelerate digital transformation, reduce IT infrastructure costs, and increase scalability with the full 
@@ -671,19 +671,19 @@
             <div class="content">Contact Us!
             <br> <a href="...">contact@x3otech.com</a>
             <br>Monday - Friday
-            <br>9AM TO 8PM Eastern Time</div>
+            <br>9AM TO 8PM PST</div>
             </div>
             <div class="block mx-0 mx-lg-3 mt-4">
             <h4 class="h5"></h4>
-            <div class="content">231 Ross Street.
-            <br>K7A 1C2.
-            <br>Smiths Falls</div>
+            <div class="content">
+            <br>
+            <br></div>
             </div>
             <div class="block mx-0 mx-lg-3 mt-4">
-            <h4 class="h5">UK Office</h4>
-            <div class="content">57 Folkestone Road.
-            <br>AB54 5XQ,
-            <br>Winston</div>
+            <h4 class="h5"></h4>
+            <div class="content">
+            <br>
+            <br></div>
             </div>
             </div>
             </div>
@@ -755,7 +755,8 @@
 						</form>
 					</div>
 					<p class="mb-0">Thank you for your interest in our services! To learn more and receive a personalized consultation, please provide us with your email address and we'll be in touch shortly. 
-            We value your privacy and will never share your information with any third parties. We look forward to speaking with you soon!</p>
+            We value your privacy and will never share your information with any third parties. We look forward to speaking with you soon!"
+          </p>
 				</div>
 			</div>
 		</div>
@@ -943,6 +944,56 @@
   </form>
 </div>
 
+<script>
+  const chatBotLauncher = document.querySelector('.chatbot-launcher');
+  const chatBotExpanded = document.querySelector('#chatbot-expanded');
+  const sendButton = document.querySelector('#sendButton');
+  const inputMessage = document.querySelector('#inputMessage');
+  const messagesContainer = document.querySelector('#messages');
+  const apiKeyConnected = false; // Set this variable to true when the API key is connected
 
+  const mockConversation = [
+    { type: 'bot', text: 'Hi there! How can I help you today?' },
+    { type: 'user', text: 'What are your services?' },
+    { type: 'bot', text: 'We provide a wide range of services, including web development, digital marketing, and more!' }
+  ];
 
+  chatBotLauncher.addEventListener('click', () => {
+    chatBotLauncher.classList.toggle('active');
+    chatBotExpanded.style.display = chatBotExpanded.style.display === 'none' ? 'block' : 'none';
+    if (!apiKeyConnected) displayMockConversation();
+  });
 
+  sendButton.addEventListener('click', sendMessage);
+
+  inputMessage.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') sendMessage();
+  });
+
+  function sendMessage() {
+    const message = inputMessage.value.trim();
+    if (message) {
+      createMessageElement('user', message);
+      inputMessage.value = '';
+      if (apiKeyConnected) {
+        // Call your API to get the response
+      } else {
+        createMessageElement('bot', "I'm sorry, but I am unable to respond at the moment. Please try again later.");
+      }
+    }
+  }
+
+  function displayMockConversation() {
+    mockConversation.forEach((message) => {
+      createMessageElement(message.type, message.text);
+    });
+  }
+
+  function createMessageElement(type, text) {
+    const messageElement = document.createElement('div');
+    messageElement.className = type;
+    messageElement.textContent = text;
+    messagesContainer.appendChild(messageElement);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+</script>
