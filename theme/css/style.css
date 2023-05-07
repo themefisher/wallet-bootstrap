@@ -10095,38 +10095,4 @@ textarea.form-control {
     width: 200px;
   }
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.rotating-banner {
-  animation: rotate 10s linear infinite;
-}
-
-/* Styling for the loading animation */
-#chat-loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 5px solid #ccc;
-  border-top: 5px solid #673AB7;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
 /*# sourceMappingURL=style.css.map */
