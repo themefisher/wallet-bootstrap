@@ -34,6 +34,11 @@
 
 	<!-- # Main Style Sheet -->
 	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  
+
 </head>
 
 <body>
@@ -71,93 +76,32 @@
 							</li>
 							<li><a class="dropdown-item " href="terms.html">Terms &amp; Conditions</a>
 							</li>
-							<li><a class="dropdown-item " href="privacy-policy.html">FAQ's</a>
+							<li><a class="dropdown-item " href="faq.html">FAQ's</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<!-- account btn --> <a href="#!" class="btn btn-outline-primary">Call Now</a>
-				<!-- account btn --> <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Email Us</a>
+				<!-- account btn --> <a href="mailto:jason@x3otech.com" class="btn btn-primary ms-2 ms-lg-3">Email Us</a>
+
 			</div>
 		</div>
 	</nav>
 </header>
 <!-- /navigation -->
 
-<div class="modal applyLoanModal fade" id="applyLoan" tabindex="-1" aria-labelledby="applyLoanLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <h4 class="modal-title" id="exampleModalLabel">Request a Consultation</h4>
-        <input type="text" class="form-control shadow-none" id="company_name" placeholder="ex: XYZ Inc.">
-      </div>
-      <div class="form-group">
-        <label for="service_interest" class="form-label">Services Interested In</label>
-        <form action="#!" method="post">
-          <div class="row">
-            <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
-                <select class="form-control shadow-none" id="service_interest">
-                  <option>IT Infrastructure</option>
-                  <option>Software Development</option>
-                  <option>Cybersecurity</option>
-                  <option>Data Analytics</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
-                <label for="contact_full_name" class="form-label">Full Name</label>
-                <input type="text" class="form-control shadow-none" id="contact_full_name">
-              </div>
-            </div>
-            <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
-                <label for="contact_email_address" class="form-label">Email address</label>
-                <input type="email" class="form-control shadow-none" id="contact_email_address">
-              </div>
-            </div>
-            <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
-                <label for="contact_phone_number" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control shadow-none" id="contact_phone_number">
-              </div>
-            </div>
-            <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
-                <label for="preferred_contact_method" class="form-label">Preferred Contact Method</label>
-                <select class="form-control shadow-none" id="preferred_contact_method">
-                <option>Email</option>
-                <option>Phone</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-lg-12">
-            <button type="submit" class="btn btn-primary w-100">Request Consultation</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-</div>
-
-
-
-
 <section class="banner bg-tertiary position-relative overflow-hidden">
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <div class="block text-center text-lg-start pe-0 pe-xl-5">
-        <h1 class="text-capitalize mb-4">Empower Your Business with Cutting-Edge Solutions</h1>
-        <p class="mb-4">Achieve your business goals with X3O Technologies, a black-owned consulting agency dedicated to providing startups and enterprises with innovative cloud computing, cybersecurity, and growth strategies. Let us help you scale and secure your business with confidence.</p>
-        <a type="button" class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#applyLoan">Get Started Today <span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
+        <div class="block text-center text-lg-start pe-0 pe-xl-5" data-aos="fade-right" data-aos-duration="1000">
+          <h1 class="text-capitalize mb-4">Empower Your Business with Cutting-Edge Solutions</h1>
+          <p class="mb-4">Achieve your business goals with X3O Technologies, a black-owned consulting agency dedicated to providing startups and enterprises with innovative cloud computing, cybersecurity, and growth strategies. Let us help you scale and secure your business with confidence.</p>
+          <a type="button" class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#applyLoan">Get Started Today <span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="ps-lg-5 text-center">
+        <div class="ps-lg-5 text-center" data-aos="fade-left" data-aos-duration="1000">
           <img loading="lazy" decoding="async"
             src="images/banner/banner.png"
             alt="banner image" class="w-100 rotating-banner">
@@ -165,19 +109,29 @@
       </div>
       <script>
         document.addEventListener("DOMContentLoaded", function() {
+          // Initialize AOS
+          AOS.init();
+          
           // Get the rotating banner element
           const rotatingBanner = document.querySelector(".rotating-banner");
       
           // Add the scroll event listener
           window.addEventListener("scroll", function() {
             // Calculate the rotation angle based on the scroll position
-            const rotationAngle = window.scrollY * 0.1; // Adjust the multiplier (0.1) to control the rotation speed
+            const rotationAngle = window.scrollY * 0.5; // Adjust the multiplier (0.1) to control the rotation speed
       
             // Apply the rotation to the banner
             rotatingBanner.style.transform = `rotate(${rotationAngle}deg)`;
           });
         });
       </script>
+    </div>
+  </div>
+  <div class="has-shapes">
+    <!-- SVG shapes here -->
+  </div>
+
+
       
 
         </div>
@@ -1003,7 +957,27 @@
 <script src="plugins/scrollmenu/scrollmenu.min.js"></script>
 
 <!-- Main Script -->
+<!-- Main Script -->
 <script src="js/script.js"></script>
+
+<script>
+  function refreshNavigationAnimation() {
+    const navigation = document.querySelector(".navigation");
+
+    // Add the 'refresh-animation' class
+    navigation.classList.add("refresh-animation");
+
+    // Remove the 'refresh-animation' class after the animation has completed
+    setTimeout(() => {
+      navigation.classList.remove("refresh-animation");
+    }, 500);
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    refreshNavigationAnimation();
+  });
+</script>
+
+
 
 </body>
 </html>

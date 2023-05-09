@@ -123,3 +123,14 @@ chatbotLauncher.addEventListener('click', () => {
   chatbotExpanded.style.display = chatbotExpanded.style.display === 'none' ? 'block' : 'none';
   chatbotLauncher.classList.toggle('active');
 });
+function refreshNavigationAnimation() {
+  const navigation = document.querySelector(".navigation");
+
+  // Add the 'refresh-animation' class
+  navigation.classList.add("refresh-animation");
+
+  // Remove the 'refresh-animation' class after the animation has completed
+  setTimeout(() => {
+    navigation.classList.remove("refresh-animation");
+  }, 500);
+}
