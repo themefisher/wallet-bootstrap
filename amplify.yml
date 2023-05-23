@@ -7,6 +7,10 @@ frontend:
     build:
       commands:
         - npm run build
+        - npm run test
+    postBuild:
+      commands:
+        - echo "Build complete!"
   artifacts:
     baseDirectory: /dist
     files:
@@ -14,3 +18,5 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+      - ~/.cache/yarn/**/*
+
