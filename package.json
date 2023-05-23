@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build && mv ./build ./dist",
+    "build": "gulp build && mv ./theme ./dist",
     "test": "echo \"No tests to run\""
   },
   "dependencies": {
