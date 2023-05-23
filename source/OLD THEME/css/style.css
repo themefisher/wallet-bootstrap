@@ -10095,49 +10095,4 @@ textarea.form-control {
     width: 200px;
   }
 }
-<<<<<<< Updated upstream
-
-.text-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.text-container::before,
-.text-container::after {
-  content: "";
-  position: absolute;
-  background-color: green;
-  width: 100%;
-  transition: transform 0.5s ease-out;
-}
-
-.text-container::before {
-  top: 0;
-  height: 50%;
-  transform: translateY(-100%);
-}
-
-.text-container::after {
-  bottom: 0;
-  height: 50%;
-  transform: translateY(100%);
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-.navigation.refresh-animation {
-  animation: slideDown 0.5s ease;
-}
-
-
-
-=======
->>>>>>> Stashed changes
 /*# sourceMappingURL=style.css.map */

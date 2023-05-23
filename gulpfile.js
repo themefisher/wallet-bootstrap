@@ -11,6 +11,23 @@ const rimraf = require("rimraf");
 const comments = require("gulp-header-comment");
 const jshint = require("gulp-jshint");
 
+const eslint = require('gulp-eslint');
+
+gulp.task('js:build', function () {
+  return gulp.src(path.src.js)
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
+    .pipe(comments(`
+  WEBSITE: https://themefisher.com
+  TWITTER: https://twitter.com/themefisher
+  FACEBOOK: https://www.facebook.com/themefisher
+  GITHUB: https://github.com/themefisher/
+  `))
+    .pipe(gulp.dest(path.build.dir + 'js/'))
+    .pipe(bs.reload({stream: true}));
+});
+
 var path = {
   src: {
     html: "source/*.html",
@@ -82,12 +99,16 @@ gulp.task("scss:build", function () {
 });
 
 // Javascript
+// Javascript
 gulp.task("js:build", function () {
   return gulp
     .src(path.src.js)
     .pipe(jshint("./.jshintrc"))
     .pipe(jshint.reporter("jshint-stylish"))
-    .on("error", gutil.log)
+    .on("error", function (err) {
+      gutil.log(gutil.colors.red("[Error]"), err.toString());
+      this.emit("end");
+    })
     .pipe(
       comments(`
   WEBSITE: https://themefisher.com
@@ -103,6 +124,7 @@ gulp.task("js:build", function () {
       })
     );
 });
+
 
 // Images
 gulp.task("images:build", function () {
