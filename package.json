@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "test": "echo \"No tests to run\""
   },
   "dependencies": {
     "browser-sync": "^2.27.10",
