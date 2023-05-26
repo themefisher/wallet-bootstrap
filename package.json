@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build && mv ./theme ./dist",
+    "build": "gulp build && shx mv ./theme ./dist",
+
     "test": "echo \"No tests to run\""
   },
   "dependencies": {
@@ -25,6 +27,7 @@
     "sass": "^1.53.0"
   },
   "devDependencies": {
-    "gulp-eslint": "^6.0.0"
+    "gulp-eslint": "^6.0.0",
+    "shx": "^0.3.4"
   }
 }
