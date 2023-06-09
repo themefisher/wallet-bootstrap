@@ -10136,6 +10136,17 @@ textarea.form-control {
   animation: slideDown 0.5s ease;
 }
 
+.count {
+  background-color: green;  /* The background color of the circle */
+  border-radius: 50%;       /* Makes the shape round */
+  color: white;             /* The color of the number */
+  width: 50px;              /* The width of the circle */
+  height: 50px;             /* The height of the circle */
+  display: flex;            /* Enables Flexbox */
+  align-items: center;      /* Vertical centering in Flexbox */
+  justify-content: center;  /* Horizontal centering in Flexbox */
+}
+
 
 
 =======
