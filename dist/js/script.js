@@ -130,3 +130,7 @@ chatbotLauncher.addEventListener('click', () => {
   chatbotExpanded.style.display = chatbotExpanded.style.display === 'none' ? 'block' : 'none';
   chatbotLauncher.classList.toggle('active');
 });
+
+<script>
+  AOS.init();
+</script>
