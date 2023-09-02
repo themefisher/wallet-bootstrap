@@ -130,3 +130,33 @@ chatbotLauncher.addEventListener('click', () => {
   chatbotExpanded.style.display = chatbotExpanded.style.display === 'none' ? 'block' : 'none';
   chatbotLauncher.classList.toggle('active');
 });
+
+// Add this code to your existing JavaScript code
+const chatContainer = document.querySelector('.chat-container');
+let offsetX, offsetY, isDragging = false;
+
+chatContainer.addEventListener('mousedown', startDragging);
+chatContainer.addEventListener('mouseup', stopDragging);
+
+function startDragging(e) {
+  if (e.target.classList.contains('chat-container')) {
+    isDragging = true;
+    offsetX = e.clientX - chatContainer.getBoundingClientRect().left;
+    offsetY = e.clientY - chatContainer.getBoundingClientRect().top;
+    chatContainer.classList.add('dragging');
+    document.addEventListener('mousemove', drag);
+  }
+}
+
+function stopDragging() {
+  isDragging = false;
+  chatContainer.classList.remove('dragging');
+  document.removeEventListener('mousemove', drag);
+}
+
+function drag(e) {
+  if (isDragging) {
+    chatContainer.style.left = e.clientX - offsetX + 'px';
+    chatContainer.style.top = e.clientY - offsetY + 'px';
+  }
+}

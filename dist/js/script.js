@@ -134,3 +134,90 @@ chatbotLauncher.addEventListener('click', () => {
 <script>
   AOS.init();
 </script>
+
+// Smooth Scrolling
+$(document).on('click', 'a[href^="#"]', function (event) {
+  event.preventDefault();
+  $('html, body').animate({
+    scrollTop: $($.attr(this, 'href')).offset().top
+  }, 500);
+});
+
+// Lazy Loading
+$("img.lazy").lazyload();
+
+// Carousel Effects
+$('.carousel').carousel({
+  interval: 2000,
+  transition: 'fade'
+});
+
+// JavaScript for Email Popup
+document.addEventListener('DOMContentLoaded', function() {
+  const emailButton = document.querySelector('.email-button');
+  const emailTemplates = document.querySelector('.email-templates');
+
+  if (emailButton && emailTemplates) {
+    emailButton.addEventListener('mouseover', function() {
+      emailTemplates.style.display = 'block';
+    });
+
+    emailButton.addEventListener('mouseout', function() {
+      emailTemplates.style.display = 'none';
+    });
+  }
+});
+
+<script>
+function openEmailWindow(email, subject) {
+  window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject);
+}
+</script>
+
+
+const chatBody = document.getElementById('chat-body');
+const userInput = document.getElementById('user-input');
+const sendBtn = document.getElementById('send-btn');
+const prompts = [
+  "Hello! How can we help you?",
+  "Tell us more about your inquiry.",
+  "Would you like to know more about our services?",
+  "Feel free to ask any questions you have.",
+  "We're here to assist you!"
+];
+
+sendBtn.addEventListener('click', sendMessage);
+
+function sendMessage() {
+  const userMessage = userInput.value;
+  if (userMessage.trim() !== '') {
+    appendMessage(userMessage, 'user');
+    respondToUser(userMessage);
+    userInput.value = '';
+  }
+}
+
+function appendMessage(message, sender) {
+  const messageDiv = document.createElement('div');
+  messageDiv.classList.add('chat-message');
+  messageDiv.classList.add(sender);
+  messageDiv.textContent = message;
+  chatBody.appendChild(messageDiv);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function respondToUser(userMessage) {
+  setTimeout(() => {
+    const randomIndex = Math.floor(Math.random() * prompts.length);
+    const aiResponse = prompts[randomIndex];
+    appendMessage(aiResponse, 'ai');
+  }, 1000);
+}
+
+// Initial prompt
+window.onload = () => {
+  setTimeout(() => {
+    const initialPrompt = "Welcome! How can we assist you today?";
+    appendMessage(initialPrompt, 'ai');
+  }, 1000);
+};
