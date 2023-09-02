@@ -39,6 +39,10 @@
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 
+.center-text {
+  text-align: center;
+}
+
 *,
 *::before,
 *::after {
@@ -10139,3 +10143,6 @@ textarea.form-control {
 =======
 >>>>>>> Stashed changes
 /*# sourceMappingURL=style.css.map */
+.center-text {
+  text-align: center;
+}
