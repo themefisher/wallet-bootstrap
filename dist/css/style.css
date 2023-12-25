@@ -2797,10 +2797,15 @@
  }
  
  .btn-success {
-   color: #fff;
-   background-color: #198754;
-   border-color: #198754;
- }
+  background-color: #28a745; /* Green background */
+  color: white;
+  padding: 14px 28px; /* Increase padding to make the button taller */
+  font-size: 16px; /* Increase font size if needed */
+  border-radius: 20px; /* Increased border-radius for more curved corners */
+  border: none; /* Remove the border */
+  width: 100%; /* Set the width to match the form fields */
+}
+
  .btn-success:hover {
    color: #fff;
    background-color: #157347;
@@ -10325,7 +10330,7 @@
   right: 20px;
   width: 300px;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 100px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
@@ -10340,3 +10345,49 @@
 .chat-container.dragging {
   cursor: grabbing;
 }
+
+.subscription-form .form-control,
+.subscription-form .button-container {
+    margin-bottom: 15px; /* Adjust this value as needed to match your form field spacing */
+}
+
+.btn-outline-primary {
+    border: 1px solid #007bff; /* Primary outline color */
+    background-color: transparent; /* Transparent background */
+    color: #007bff; /* Primary color for the text */
+    position: relative; /* To position the icon */
+    padding: .375rem .75rem; /* Bootstrap's default padding for buttons */
+    display: inline-block; /* For inline positioning */
+    text-align: center; /* Center the text */
+    vertical-align: middle; /* Align the text vertically */
+    user-select: none; /* Prevent text selection */
+    border-radius: .25rem; /* Bootstrap's default border-radius */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Align the icon to the right of the text */
+.btn-outline-primary .fas {
+    margin-left: .5rem; /* Spacing between text and icon */
+}
+
+/* Hover effect */
+.btn-outline-primary:hover {
+    color: #00a400; /* Text color */
+    background-color: #007bff; /* Background color */
+    border-color: #00a400; /* Border color */
+}
+
+/* Maintain consistency with form control heights */
+.btn-outline-primary {
+    height: calc(1.5em + .75rem + 2px); /* Bootstrap's default height for form controls */
+    padding: .375rem .75rem; /* Bootstrap's default padding for buttons */
+}
+
+/* Responsive centering of the button, if needed */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+}
+
+/* Ensure Font Awesome is loaded for the arrow icon */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
