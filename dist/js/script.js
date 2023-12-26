@@ -221,3 +221,36 @@ window.onload = () => {
     appendMessage(initialPrompt, 'ai');
   }, 1000);
 };
+
+if (typewriterElement) {
+  var text = typewriterElement.textContent;
+  var i = 0;
+  typewriterElement.textContent = '';
+
+  function typeWriter() {
+    if (i < text.length) {
+      typewriterElement.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 150);
+    }
+  }
+
+  typeWriter();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const element = document.querySelector('.typing-effect h1');
+  const text = element.innerHTML;
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 150); // Adjust speed here
+    }
+  }
+
+  element.innerHTML = '';
+  typing();
+});

@@ -1,0 +1,19 @@
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.15em solid orange; /* The typewriter cursor */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite;
+}
+
+@keyframes blinkTextCursor {
+  from { border-right-color: orange; }
+  to { border-right-color: transparent; }
+}

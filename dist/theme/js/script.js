@@ -160,3 +160,22 @@ function drag(e) {
     chatContainer.style.top = e.clientY - offsetY + 'px';
   }
 }
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize AOS
+  AOS.init();
+  
+  // Get the rotating banner element
+  const rotatingBanner = document.querySelector(".rotating-banner");
+
+  // Add the scroll event listener
+  window.addEventListener("scroll", function() {
+    // Calculate the rotation angle based on the scroll position
+    const rotationAngle = window.scrollY * 0.5; // Adjust the multiplier (0.1) to control the rotation speed
+
+    // Apply the rotation to the banner
+    rotatingBanner.style.transform = `rotate(${rotationAngle}deg)`;
+  });
+});
+</script>

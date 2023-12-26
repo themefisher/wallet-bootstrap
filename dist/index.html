@@ -17,8 +17,7 @@
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
   
-  <!-- theme meta -->
-  <meta name="theme-name" content="wallet" />
+
 
 	<!-- # Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,20 +89,47 @@
     <div class="row align-items-center justify-content-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="block text-center text-lg-start pe-0 pe-xl-5" data-aos="fade-right" data-aos-duration="1000">
-          <h1 class="text-capitalize mb-4">Empower Your Business with Cutting-Edge Solutions</h1>
-          <p class="mb-4">Achieve your business goals with X3O Technologies, a black-owned consulting agency dedicated to providing startups and enterprises with innovative cloud computing, cybersecurity, and growth strategies. Let us help you scale and secure your business with confidence.</p>
+          <h1 class="text-capitalize mb-4 typing-effect">Empower Your Business with Cutting-Edge Solutions</h1>
+
+          <p class="mb-4">Achieve your business goals with X3O Technologies, a consulting team dedicated to providing startups and enterprises with innovative cloud computing, cybersecurity, and growth strategies.</p>
           <a href="https://x3otech.retool.com/form/230e2baf-e4ea-47b6-9b24-36ec213988a8" target="_blank" class="btn btn-success">
             Connect With X3O</a>
-          
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="ps-lg-5 text-center" data-aos="fade-left" data-aos-duration="1000">
+        <div class="ps-lg-5 text-center" data-aos="fade-left" data-aos-duration="500">
           <img loading="lazy" decoding="async"
             src="images/banner/banner.png"
             alt="banner image" class="w-100 rotating-banner">
         </div>
       </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Initialize AOS
+          AOS.init();
+        
+          // Typing effect
+          const text = "Empower Your Business with Cutting-Edge Solutions";
+          const typingElement = document.querySelector(".typing-effect");
+          let i = 0;
+        
+          function typeWriter() {
+            if (i < text.length) {
+              typingElement.innerHTML += text.charAt(i);
+              i++;
+              setTimeout(typeWriter, 100); // Adjust the typing speed here
+            }
+          }
+        
+          // Clear the initial text and start typing
+          typingElement.innerHTML = '';
+          typeWriter();
+        
+          // Existing code for the rotating banner
+          // ...
+        });
+        </script>
+        
       <script>
         document.addEventListener("DOMContentLoaded", function() {
           // Initialize AOS
@@ -127,10 +153,6 @@
   <div class="has-shapes">
     <!-- SVG shapes here -->
   </div>
-
-
-      
-
         </div>
       </div>
     </div>
